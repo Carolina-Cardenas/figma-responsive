@@ -1,54 +1,151 @@
+@import url("https://fonts.googleapis.com/css?family=Baloo&Source+Sans+Pro&Source&Poppins+Sans&display=swap");
+
 body {
+  margin: 0;
+  background-color: #000000;
+}
+.main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  gap: 5%;
+  margin-top: 5%;
+  margin-left: 10%;
+}
+.logo {
+  font-family: "Baloo";
+  color: #ffffff;
+  font-size: 1.5rem;
+}
+nav {
+  ul {
     margin: 0;
-    background-color: #000000;
+    padding: 0;
+    list-style: none;
+  }
+  li {
+    display: inline-block;
+  }
+  a {
+    padding: 6px 12px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #ffffff;
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 1rem;
+  }
+}
+.info {
+  color: #ffffff;
+  font-family: "Source Sans Pro", sans-serif;
+  width: 26rem;
+  font-size: 1.375rem;
+}
+.img {
+  max-width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  margin-right: auto;
+}
+.text {
+  color: #ffffff;
+  max-width: 30%;
+  margin-top: 5%;
+  align-self: flex-start;
+  margin-left: 5%;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 1rem;
+}
+.musician {
+  font-family: Poppins, sans-serif;
+  font-size: 4rem;
+  line-height: 5rem;
+  margin-bottom: 3rem;
+  color: #ffffff;
+}
+.grid__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  margin-top: 50px;
+  line-height: 30px;
+  margin-left: 10%;
+}
+
+.grid__element {
+  overflow: hidden;
+  position: relative;
+  margin: 0;
+}
+.first {
+  grid-column: 1/2;
+  grid-row: 2/3;
+}
+.second {
+  grid-column: 2/3;
+  grid-row: 1/4;
+}
+@media screen and (max-width: 1024px) {
+  header {
+    justify-content: space-between;
+  }
+  nav {
+    margin-right: 8rem;
   }
   .main {
     display: flex;
-    justify-content: space-between;
-    align-items: center; 
-    flex-wrap: wrap;
-  } 
-
-header {
-    justify-content: space-between;
-    margin-top: 15px;
-    margin-left: 30px;
-    
-   
+    align-items: center;
+    justify-content: center;
   }
-  nav {
-    ul {
-      margin: 0;
-      padding: 0;
-      list-style: none;
-      
-    }
-    li {
-      display: inline-block;
-     
-    }
-    a {
-      align-items: center;
-      padding: 6px 12px;
-      text-decoration: none;
-      font-weight: bold;
-      color:#FFFFFF;
-
-    }
-   
+  .musician {
+    font-size: 3.5rem;
   }
   .img {
-    max-width:70%;
-    margin-right: 50%;
-    height: auto;
-    display: flex;
-    justify-content:space-between;
+    max-width: 60%;
+    margin-left: auto;
     margin-right: auto;
-    
   }
-  .text{
-   color:#FFFFFF;
-   max-width: 40%;
-   max-height: 40%;
-   margin-left: 5%; 
+  .info {
+    font-size: 1.375rem;
+    width: 90%;
+    text-align: center;
   }
+  .grid__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .first {
+    grid-column: 1;
+    grid-row: auto;
+    text-align: center;
+  }
+  .second {
+    grid-column: 1;
+    grid-row: auto;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 480px) {
+  .musician {
+    font-size: 2.5rem;
+  }
+
+  .info {
+    font-size: 1rem;
+  }
+
+  .img {
+    max-width: 80%;
+  }
+  nav {
+    display: none;
+  }
+}
